@@ -1,6 +1,8 @@
 package com.ljc;
 
 import com.ljc.entity.Address;
+import com.ljc.entity.Note;
+import com.ljc.entity.Student;
 import com.ljc.entity.User;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
@@ -35,6 +37,7 @@ public class XstreamDemo {
             addresses.add(addr);
         }
 
+        //基本api使用-----------------------------
         //对象转xml
         XStream xStream = new XStream(new StaxDriver());
         //全路径类名可以使用别名来代替
@@ -50,8 +53,18 @@ public class XstreamDemo {
         String xml = xStream.toXML(user);
         System.out.println(formatXml(xml));
 
+        System.out.println("------------------------------------");
 
-
+        //注解方式使用-----------------------------------
+        Student student = new Student();
+        student.setStudentName("test01");
+        student.addNote(new Note("first","My first assignment."));
+        student.addNote(new Note("second","My Second assignment."));
+        student.setType(1);
+        xStream = new XStream(new StaxDriver());
+        xStream.processAnnotations(Student.class);
+        xml = xStream.toXML(student);
+        System.out.println(formatXml(xml));
     }
 
 
