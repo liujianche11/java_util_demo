@@ -13,6 +13,7 @@
     <module>java_util_common</module>
     <module>xml_util</module>
     <module>json_util</module>
+    <module>apache_commons_util</module>
   </modules>
 
   <name>Maven</name>
