@@ -9,11 +9,11 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
-    <module>gson-demo</module>
     <module>java_util_common</module>
     <module>xml_util</module>
     <module>json_util</module>
     <module>apache_commons_util</module>
+    <module>encrypt_util</module>
   </modules>
 
   <name>Maven</name>

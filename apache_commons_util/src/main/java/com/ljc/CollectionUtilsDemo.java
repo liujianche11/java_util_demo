@@ -3,6 +3,7 @@ package com.ljc;
 import com.ljc.entity.User;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.collections4.Transformer;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,8 +14,9 @@ public class CollectionUtilsDemo {
     public static void main(String[] args) {
         //addIgnoreNull();
         //collate();
-        collect();
+       // collect();
 
+        System.out.println( StringUtils.join("a","b", "_"));
     }
 
     //往集合增加元素时忽略空对象
